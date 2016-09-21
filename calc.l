@@ -20,7 +20,7 @@ yywrap(void)
     yylval.double_value = temp;
     return DOUBLE_LITERAL;
 }
-[ \t];
+[ \t]|[\s];
 . {
     fprintf(stderr, "lexical error.\n");
     exit(1);
