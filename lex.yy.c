@@ -761,9 +761,9 @@ YY_RULE_SETUP
 #line 17 "./calc.l"
 {
     double temp;
-    sscanf(yytext, "%lf", &temp)
-    yylval.double_value = temp
-    return DOUBLE_LITERAL
+    sscanf(yytext, "%lf", &temp);
+    yylval.double_value = temp;
+    return DOUBLE_LITERAL;
 }
 	YY_BREAK
 case 7:
@@ -775,8 +775,8 @@ case 8:
 YY_RULE_SETUP
 #line 24 "./calc.l"
 {
-    fprintf(stderr, "lexical erro.\n");
-    exit(1)
+    fprintf(stderr, "lexical error\n");
+    exit(1);
 }
 	YY_BREAK
 case 9:
