@@ -330,6 +330,8 @@ void yyfree (void *  );
 
 #define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_at_bol)
 
+/* Begin user sect3 */
+
 typedef unsigned char YY_CHAR;
 
 FILE *yyin = (FILE *) 0, *yyout = (FILE *) 0;
@@ -369,8 +371,8 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[19] =
     {   0,
-        0,    0,   10,    8,    8,    5,    3,    1,    2,    8,
-        4,    6,    6,    7,    0,    6,    6,    0
+        0,    0,   10,    8,    8,    5,    3,    1,    2,    4,
+        6,    6,    7,    0,    0,    6,    6,    0
     } ;
 
 static yyconst flex_int32_t yy_ec[256] =
@@ -384,7 +386,7 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        7,    1,   12,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
 
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -405,38 +407,40 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int32_t yy_meta[13] =
+static yyconst flex_int32_t yy_meta[12] =
     {   0,
-        1,    1,    1,    1,    2,    1,    2,    1,    2,    2,
-        1,    2
+        1,    1,    1,    1,    1,    1,    2,    1,    3,    3,
+        1
     } ;
 
-static yyconst flex_int16_t yy_base[20] =
+static yyconst flex_int16_t yy_base[22] =
     {   0,
-        0,    0,   19,   20,    7,   20,   20,    5,   20,    4,
-       20,    0,    4,   20,    0,   20,    0,   20,   13
+        0,    0,   22,   23,   10,   23,   23,   23,   23,   23,
+       13,   12,   23,    0,   11,   10,    0,   23,   10,   12,
+       13
     } ;
 
-static yyconst flex_int16_t yy_def[20] =
+static yyconst flex_int16_t yy_def[22] =
     {   0,
-       18,    1,   18,   18,   18,   18,   18,   19,   18,   19,
-       18,   10,   10,   18,   10,   18,   13,    0,   18
+       18,    1,   18,   18,   18,   18,   18,   18,   18,   18,
+       19,   20,   18,   21,   19,   20,   21,    0,   18,   18,
+       18
     } ;
 
-static yyconst flex_int16_t yy_nxt[33] =
+static yyconst flex_int16_t yy_nxt[35] =
     {   0,
-        4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
-        4,    4,   17,   17,   15,   16,   16,   14,   18,    3,
-       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
-       18,   18
+        4,    5,    6,    7,    8,    9,    4,   10,   11,   12,
+        4,   15,   15,   16,   16,   17,   14,   14,   14,   14,
+       13,   18,    3,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18
     } ;
 
-static yyconst flex_int16_t yy_chk[33] =
+static yyconst flex_int16_t yy_chk[35] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,   13,   13,   19,   10,    8,    5,    3,   18,
-       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
-       18,   18
+        1,   19,   19,   20,   20,   21,   16,   15,   12,   11,
+        5,    3,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -463,7 +467,7 @@ yywrap(void)
 {
     return 1;
 }
-#line 467 "lex.yy.c"
+#line 471 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -647,7 +651,7 @@ YY_DECL
     
 #line 11 "./calc.l"
 
-#line 651 "lex.yy.c"
+#line 655 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -706,7 +710,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 20 );
+		while ( yy_base[yy_current_state] != 23 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -775,7 +779,7 @@ case 8:
 YY_RULE_SETUP
 #line 24 "./calc.l"
 {
-    fprintf(stderr, "lexical error\n");
+    fprintf(stderr, "lexical error.\n");
     exit(1);
 }
 	YY_BREAK
@@ -784,7 +788,7 @@ YY_RULE_SETUP
 #line 28 "./calc.l"
 ECHO;
 	YY_BREAK
-#line 788 "lex.yy.c"
+#line 792 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1782,3 +1786,6 @@ void yyfree (void * ptr )
 #define YYTABLES_NAME "yytables"
 
 #line 28 "./calc.l"
+
+
+
