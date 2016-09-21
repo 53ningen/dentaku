@@ -48,6 +48,10 @@ primary_expression
     {
         $$ = $2;
     }
+    | SUB DOUBLE_LITERAL
+    {
+        $$ = -$2;
+    }
     ;
 %%
 int
