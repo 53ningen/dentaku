@@ -21,7 +21,7 @@ int yywrap(void) {
     yylval.double_value = temp;
     return DOUBLE_LITERAL;
 }
-[ \t]|[\s];
+[ \t]
 . {
     fprintf(stderr, "lexical error.\n");
     exit(1);
